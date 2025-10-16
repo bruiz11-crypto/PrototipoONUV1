@@ -229,7 +229,7 @@
 
     /* LINKS */
     a {
-    color: #1e3c72;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -273,3 +273,4 @@
         gap: 15px;
     }
     }
+
