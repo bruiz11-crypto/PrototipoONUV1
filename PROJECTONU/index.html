@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/jpeg" href="Logo_of_the_United_Nations-removebg-preview.png">
+
+   <!-- OPEN GRAPH -->
+<meta property="og:title" content="ONU y ODS — MS">
+<meta property="og:description" content="Descubre los Objetivos de Desarrollo Sostenible (ODS) y cómo ONU-SM trabaja para llevar alimento y bienestar a todo el mundo.">
+<meta property="og:image" content="imagenes/Prototipo de proyecto ONU">
+<meta property="og:image:alt" content="Icono ONU">
+
+  <title>ONU y ODS — MS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="Logo_of_the_United_Nations-removebg-preview.png" alt="ONU-SM" class="navbar-logo">
+      <span class="navbar-title">ONU-SM</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="historial.html">Historial</a>
+      <a href="https://www.un.org/es/" target="_blank">ONU Oficial</a>
+    </div>
+  </nav>
+
+  <div class="container" role="main">
+    <header>
+      <div>
+        <h2>¡Todo listo para ti, en un mismo lugar, en el mismo mundo!</h2>
+        <p>Nuestro objetivo en <strong>ONU-SM</strong> es que se pueda obtener como fuente de alimento cualquier hortaliza, tubérculo, verdura o fruta.</p>
+      </div>
+    </header>
+    
+    <!-- Quiénes somos -->
+    <section>
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una corporación que desea llevar alimento y conocimiento a cualquier parte del mundo, sin importar la distancia ni el tipo de terreno.</p>
+      <p>Colaboramos con organizaciones locales e internacionales, promoviendo la sostenibilidad, la educación y la innovación tecnológica.</p>
+    </section>
+
+    <!-- ODS -->
+    <section>
+      <h2>¿Qué son los ODS?</h2>
+      <p>Los <strong>Objetivos de Desarrollo Sostenible (ODS)</strong> son 17 metas aprobadas por la ONU en 2015 dentro de la Agenda 2030, con el objetivo de erradicar la pobreza, proteger el planeta y asegurar prosperidad para todos.</p>
+      <p>Puedes leer más en el sitio oficial de la ONU: <a href="https://www.un.org/sustainable-development/es/" target="_blank">Visitar ONU - ODS</a></p>
+
+      <div class="ods-cards">
+        <div class="ods-card">
+          <h3>1. Fin de la pobreza</h3>
+          <p>Erradicar la pobreza en todas sus formas y dimensiones para garantizar oportunidades a todos.</p>
+        </div>
+        <div class="ods-card">
+          <h3>2. Hambre cero</h3>
+          <p>Acabar con el hambre, lograr la seguridad alimentaria y promover la agricultura sostenible.</p>
+        </div>
+        <div class="ods-card">
+          <h3>3. Salud y bienestar</h3>
+          <p>Asegurar una vida saludable y promover el bienestar para todos en todas las edades.</p>
+        </div>
+        <div class="ods-card">
+          <h3>15. Vida de ecosistemas terrestres</h3>
+          <p>Proteger, restaurar y promover el uso sostenible de los ecosistemas terrestres.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo usar esta sección -->
+    <section>
+      <h2>Cómo usar esta sección</h2>
+      <ul>
+        <li>Usa los ODS como marco para diseñar proyectos sociales, educativos y ambientales.</li>
+        <li>Relaciona indicadores locales con metas específicas (ej. tasa de deserción escolar con ODS 4).</li>
+        <li>Consulta problemas de tu comunidad y reporta propuestas sostenibles.</li>
+        <li>Participa en actividades locales relacionadas con educación, agricultura y ecología.</li>
+      </ul>
+      <p>Más información sobre participación ciudadana: <a href="https://www.un.org/es/sections/issues-depth/civil-society/" target="_blank">ONU - Sociedad Civil</a></p>
+    </section>
+
+    <!-- Bandeja de reportes -->
+    <section>
+      <h2>Bandeja de reportes</h2>
+      <p>Envía observaciones, incidentes o propuestas relacionadas con los ODS. Cada reporte ayuda a construir un mundo más sostenible.</p>
+
+      <form id="reportForm" onsubmit="handleSubmit(event)">
+        <label for="name">Nombre (opcional)</label><br>
+        <input id="name" name="name" type="text" placeholder="Tu nombre o 'Anon'"><br><br>
+
+        <label for="email">Correo electrónico (opcional)</label><br>
+        <input id="email" name="email" type="email" placeholder="ejemplo@correo.com"><br><br>
+
+        <label for="ods">ODS relacionado</label><br>
+        <select id="ods" name="ods">
+          <option value="">-- Selecciona un ODS --</option>
+          <option value="1">1. Fin de la pobreza</option>
+          <option value="2">2. Hambre cero</option>
+          <option value="3">3. Salud y bienestar</option>
+          <option value="15">15. Vida de ecosistemas terrestres</option>
+        </select><br><br>
+
+        <label for="subject">Asunto</label><br>
+        <input id="subject" name="subject" type="text" placeholder="Breve título del reporte" required><br><br>
+
+        <label for="description">Descripción detallada</label><br>
+        <textarea id="description" name="description" placeholder="Describe el incidente, la observación o la propuesta..." required></textarea><br><br>
+
+        <label for="file">Adjuntar evidencia (opcional)</label><br>
+        <input id="file" name="file" type="file"><br><br>
+
+        <label for="urgency">Urgencia</label><br>
+        <select id="urgency" name="urgency">
+          <option value="normal">Normal</option>
+          <option value="alta">Alta</option>
+          <option value="critica">Crítica</option>
+        </select><br><br>
+
+        <button type="submit">Enviar reporte</button>
+      </form>
+
+      <div id="response"></div>
+      <div style="margin-top: 20px;">
+        <a href="historial.html" class="btn-link">Ver historial de reportes</a>
+      </div>
+    </section>
+
+    <!-- Tips y recursos adicionales -->
+    <section>
+      <h2>Tips y recursos</h2>
+      <ul>
+        <li>Aprende sobre agricultura sostenible: <a href="https://www.fao.org/sustainability/es/" target="_blank">FAO - Sostenibilidad</a></li>
+        <li>Conoce proyectos educativos en tu región: <a href="https://www.unesco.org/es" target="_blank">UNESCO</a></li>
+        <li>Infórmate sobre cambio climático: <a href="https://www.ipcc.ch/" target="_blank">IPCC</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div>
+      <p>© 2025 ONU-SM | <a href="mailto:contacto@onu-sm.org">contacto@onu-sm.org</a></p>
+      <a href="https://www.un.org/es/" target="_blank">Sitio oficial ONU</a>
+      <a href="https://www.un.org/sustainable-development/es/" target="_blank">ODS</a>
+      <a href="historial.html">Historial de Reportes</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
